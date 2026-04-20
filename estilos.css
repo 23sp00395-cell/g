@@ -1,0 +1,356 @@
+html{
+  scroll-behavior: smooth;
+}
+*{
+  font-family: Arial ;
+  padding: 0;
+  margin: 0;
+}
+.ar{
+  background-color: #272727;
+  border: solid black 0.1vw;
+  display: flex;
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  padding-left: 5%;
+  z-index: +10;
+}
+  .re{
+  width: 100%;
+  height: 71vh;
+  position: absolute;
+  top:10vh;
+  z-index: -2;
+  }
+  .or1{
+    color: white;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  /*inicio menu*/
+  .dropdownmenu{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 24%;
+}
+  .dropdownmenu ul, .dropdownmenu li {
+  margin: 0;
+  padding: 0;
+}
+.dropdownmenu ul {
+  background: gray;
+  list-style: none;
+  width: 100%;
+}
+.dropdownmenu li {
+  list-style-type: none;
+  float: left;
+  position: relative;
+  width:auto;
+}
+.dropdownmenu a {
+  background: #272727;
+  color: #FFFFFF;
+  display: block;
+  font: bold 0.8rem/1.3rem sans-serif;
+  padding: .5vw 5vh;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+  text-decoration: none;
+}
+.dropdownmenu li:hover a {
+  background: darkgray;
+}
+  /*fin menu*/
+
+.im1{
+  border: solid black 0.1vw;
+  color: black; 
+  text-shadow: 0.7vw 0.7vh 0.8vw white; 
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.s1{
+  background-color: black;
+  border: solid black 0.1vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  padding-top: 6vh;
+  padding: 0.9;
+  align-items: center;
+}
+  .ta{
+    background-color: black;
+    color: white;
+    height: 10vh;
+    width: 100%;
+    font-size: clamp(2rem,0.5vw + 1rem,2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .a1{
+    color: white;
+    width: 75%;
+    padding: 2.5%;
+    padding-top: 0%;
+    border-radius: 3vh;
+    font-size: clamp(0.5rem,0.25vw + 0.75rem,1.1rem);
+    display: flex;
+    margin-bottom: 2.5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    position: relative;
+  }
+  .a1:hover{
+    transform: scale(1.05);
+     border: solid white 0.15vw;
+  }
+.im2{
+  border: solid black 0.1vw;
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.s2{
+  background-color: black;
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+  .di{
+    height:50vh;
+    width: 32%;
+    font-size: clamp(0.75rem,0.25vw + 0.75rem,1.1rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    cursor: pointer;
+    border-radius: 3vh;
+    transition: all ease 0.2s;
+    position: relative;
+  }
+  .di:hover{
+    transform: scale(1.05);
+    border: solid white 0.15vw;
+  }
+    .mim{
+      color: white;
+      border: solid white 0.1vw;
+      border-radius: 3vh;
+      width: 90%;
+      height: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2vh;
+    }
+    .mtx{
+      color: white;
+      border: solid white 0.1vw;
+      border-radius: 3vh;
+      width: 90%;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      align-items: center;
+    }
+    .mti{
+      color: white;
+      border-radius: 3vh;
+      width: 90%;
+      height: 8vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 1.5vh;
+    }
+    .cit{
+      color: white;
+      border-radius: 3vh;
+      margin-top: 1vh;
+      font-size: clamp(0.7rem,0.25vw + 0.7rem,1rem);
+      width: 90%;
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+/*Inicio del carrucel*/
+.slide {
+                background-color: black;
+                color:white;
+                box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            }
+
+            .slide-inner {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                height: 80vh;
+            }
+
+            .slide-open:checked + .slide-item {
+                position: static;
+                opacity: 100;
+                display: flex;
+                justify-content: center;
+            }
+
+            .slide-item {
+                position: absolute;
+                opacity: 0;
+                -webkit-transition: opacity 0.6s ease-out;
+                transition: opacity 0.6s ease-out;
+            }
+
+            .slide-item img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+
+            .slide-control {
+                background: rgba(0, 0, 0, 0.28);
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                display: none;
+                font-size: 40px;
+                height: 40px;
+                line-height: 35px;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translate(0, -50%);
+                cursor: pointer;
+                -ms-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+                text-align: center;
+                width: 40px;
+                z-index: 10;
+            }
+
+            .slide-control.prev {
+                left: 2%;
+            }
+
+            .slide-control.next {
+                right: 2%;
+            }
+
+            .slide-control:hover {
+                background: rgba(0, 0, 0, 0.8);
+                color: #aaaaaa;
+            }
+
+            #slide-1:checked ~ .control-1,
+            #slide-2:checked ~ .control-2,
+            #slide-3:checked ~ .control-3,
+            #slide-4:checked ~ .control-4,
+            #slide-5:checked ~ .control-5,
+            #slide-6:checked ~ .control-6,
+            #slide-7:checked ~ .control-7,
+            #slide-8:checked ~ .control-8,
+            #slide-9:checked ~ .control-9,
+            #slide-10:checked ~ .control-10 {
+            display: block;
+            }
+
+            .slide-indicador {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                bottom: 2%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: 10;
+            }
+
+            .slide-indicador li {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .slide-circulo {
+                color: #828282;
+                cursor: pointer;
+                display: block;
+                font-size: 35px;
+            }
+
+            .slide-circulo:hover {
+                color: #aaaaaa;
+            }
+
+            #slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+            #slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+            #slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
+            #slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo,
+            #slide-5:checked ~ .control-5 ~ .slide-indicador li:nth-child(5) .slide-circulo,
+            #slide-6:checked ~ .control-6 ~ .slide-indicador li:nth-child(6) .slide-circulo,
+            #slide-7:checked ~ .control-7 ~ .slide-indicador li:nth-child(7) .slide-circulo,
+            #slide-8:checked ~ .control-8 ~ .slide-indicador li:nth-child(8) .slide-circulo,
+            #slide-9:checked ~ .control-9 ~ .slide-indicador li:nth-child(9) .slide-circulo,
+            #slide-10:checked ~ .control-10 ~ .slide-indicador li:nth-child(10) .slide-circulo {
+                color: #428bca;
+            }
+
+            #titulo {
+                width: 100%;
+                position: absolute;
+                padding: 0px;
+                margin: 0px auto;
+                text-align: center;
+                font-size: 27px;
+                color: rgba(255, 255, 255, 1);
+                font-family: 'Open Sans', sans-serif;
+                z-index: 9999;
+                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+                     -1px 0px 2px rgba(255, 255, 255, 0);
+            }
+/*Fin del carrucel*/
+
+.fo{
+  background-color: #272727;
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/*animaciones*/
+
